@@ -10,15 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.5.2",
-    "sequelize-cli": "^6.6.2",
+    "prisma": "^5.19.1",
     "typescript": "^5.5.4"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
-    "@types/sequelize": "^4.28.20",
+    "@prisma/client": "^5.19.1",
     "fastify": "^4.28.1",
-    "sequelize": "^6.37.3",
-    "sqlite3": "^5.1.7",
     "tsx": "^4.19.0"
   }
 }
