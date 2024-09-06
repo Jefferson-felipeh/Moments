@@ -1,7 +1,31 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
+import { CreateUserController } from "./Controllers/CreateUserController";
+import { ListUsersController } from "./Controllers/ListUsersControllers";
+
+const UserSchema = {
+    body:{
+        type: 'object',
+        required: ['name','email', 'cpf', 'age', 'password'],
+        properties: {
+            name: {type: 'string', minLength: 3},
+            email: {type: 'string', format: 'email'},
+            cpf: {type: 'string', minLength: 11},
+            age: {type: 'number'},
+            password: {type: 'string', minLength: 5},
+        },
+    }
+}
 
 export const routes = async (fastify:FastifyInstance, options: FastifyPluginOptions) => {
-    fastify.get('/home', (request: FastifyRequest, reply: FastifyReply) => {
-        return 'Rota acessada!';
+    fastify.post('/create',{
+        schema: UserSchema
+    }, (request: FastifyRequest, reply: FastifyReply) => {
+        const createService = new CreateUserController();
+        return createService.CreateUser(request, reply);
+    });
+
+    fastify.get('/listUsers', (request: FastifyRequest, reply: FastifyReply) => {
+        const listUsers = new ListUsersController();
+        return listUsers.ListUsers(request, reply);
     });
 }
