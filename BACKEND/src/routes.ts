@@ -1,6 +1,16 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
 import { CreateUserController } from "./Controllers/CreateUserController";
 import { ListUsersController } from "./Controllers/ListUsersControllers";
+import joi from 'joi';
+
+
+const schema = joi.object({
+    name: joi.string().min(3).max(45).required().messages({
+        
+    }),
+    email: joi.string().email().required(),
+
+})
 
 const UserSchema = {
     body:{
