@@ -1,10 +1,13 @@
 <h1>Login</h1>
 
-<form action="">
+<div *ngIf="emailExists == false">Email não existe</div>
+<div></div>
+
+<form>
     <label for="">Email:</label>
-    <input type="email" name="" id="">
+    <input type="email" name="email" [(ngModel)]="datasUserForm.email">
     <label for="">Password:</label>
-    <input type="password" name="" id="">
+    <input type="password" name="password">
 
     <button (click)="EventClickedBtn($event)">Login</button>
 </form>
