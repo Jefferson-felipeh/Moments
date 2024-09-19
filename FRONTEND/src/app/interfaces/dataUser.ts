@@ -6,3 +6,7 @@ export interface dataUser{
     age:number,
     password:string   
 }
+
+export interface User{
+    email: string
+}
