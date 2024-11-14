@@ -18,10 +18,15 @@ model User{
   name String
   email  String @unique()
   cpf String @unique()
-  age Int
+  age String
   phone String @unique()
   cep String
+  uf String
+  rua String?
+  city String
+  num String?
   password String
+  confirmPassword String
   created_At DateTime @default(now())
   updated_At DateTime @updatedAt()
 
