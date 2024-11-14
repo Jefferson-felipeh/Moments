@@ -1,0 +1,21 @@
+po-icon{
+    padding-left: 5px;
+}
+input{
+    font-size: 20px !important;
+    padding-left: 48px !important;
+}
+po-input ::placeholder{
+    padding-left: 2px !important;
+    font-size: 18px;
+}
+.LbIn po-icon{
+    padding: 1.5px;   
+}
+.LbIn input{
+    font-size: 19px !important;
+    padding-left: 38px !important;
+}
+.btnReturn{
+    margin:15px;
+}

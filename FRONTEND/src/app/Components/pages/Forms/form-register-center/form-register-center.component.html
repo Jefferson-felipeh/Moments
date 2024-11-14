@@ -1,0 +1,55 @@
+<section id="container">
+    <div class="forms_field">
+        <div class="div_form">
+
+            <!-- <div class="steppe">
+                <po-stepper
+                    [p-align-center]="false"
+                    [p-sequential]="true"
+                    [p-step]="currentStep"
+                    [p-steps]="stepsWithStatus"
+                    [p-step-size]="100"
+                    [p-step-icons]="true"
+                >
+                </po-stepper>
+            </div> -->
+
+            <div *ngIf="isFinalized == true">
+                <app-registration-finalized></app-registration-finalized>
+            </div>
+            
+            <div *ngIf="isErrorValue !== ''">
+                <p>Opss!...</p>
+                <p>{{isErrorValue}}</p>
+                <po-button
+                    class="btn-login mt-5"
+                    p-aria-label="Refazer cadastro"
+                    p-icon="ph ph-arrow-circle-left"
+                    p-kind="primary"
+                    p-label="Refazer Cadastro"
+                    p-size="large"
+                    (p-click)="reloadPage()"
+                    >
+                </po-button>
+            </div>
+
+            <h1 *ngIf="[1,2,3].includes(valueBtnInitial)" class="title opacity-50">Cadastrar-se</h1>
+            
+            <div *ngIf="valueBtnInitial == 1">
+                <app-form-register (emitter)="ProcessFormsInsertValues()"></app-form-register>
+            </div>
+            
+            <div *ngIf="valueBtnInitial == 2">
+                <app-form-register-process (emitter)="ProcessFormsInsertValues()" (emitterReturnForm)="ProcessFormsReturn()"></app-form-register-process>
+            </div>
+            
+            <div *ngIf="valueBtnInitial == 3">
+                <app-form-register-completed (emitter)="ProcessFormsInsertValues()" (emitterReturnForm)="ProcessFormsReturn()"></app-form-register-completed>
+            </div>
+            
+        </div>
+    </div>
+    <div *ngIf="isLoading == true">
+        <app-registration-completed></app-registration-completed>
+    </div>
+</section>

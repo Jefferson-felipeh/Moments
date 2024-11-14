@@ -1,0 +1,47 @@
+<section id="container">
+    <div class="forms_field">
+        <div class="div_form">
+            <div class="messageError" *ngIf="verifyFields!==''"><p>{{verifyFields}}</p></div>
+
+            <h1 class="opacity-50 title">Login</h1>
+            <form action="" class="po-row mb-5" >     
+                <po-email
+                    
+                    name="email" 
+                    p-required="true" 
+                    p-icon="ph ph-address-book-tabs" 
+                    p-label="E-MAIL: *" 
+                    p-placeholder="Digite seu e-mail" 
+                    class="pl-3 po-sm-12 in_btn mt-5 mb-3"
+                    p-error-pattern="Campo Nome Inválido!"
+                    [(ngModel)]="datasFormLogin.email"
+                    >
+                </po-email>
+                <po-password 
+                    name="password" 
+                    p-icon="ph ph-address-book-tabs" 
+                    p-label="PASSWORD: *" 
+                    p-placeholder="Digite sua senha" 
+                    class="pl-3 po-sm-12 mb-3"
+                    [(ngModel)]="datasFormLogin.password"
+                    >
+                </po-password>
+                    
+                <po-button
+                    class="po-sm-12"
+                    p-label="Entrar"
+                    [p-loading]="loadingBtn"
+                    p-size="100"
+                    p-icon-position="right"
+                    [p-disabled]="!validFieldsForm()"
+                    (p-click)="submitLogin()"
+                    p-kind="primary">
+                </po-button>
+                <div class="mt-1 ml-1"><p class="">* Campos Obrigatórios</p></div>
+            </form> 
+            <div class="register">
+                <p>Do you already not have an account?  <a routerLink="/register">Register</a></p>
+            </div>
+        </div>
+    </div>
+</section>

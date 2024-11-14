@@ -1,0 +1,28 @@
+
+po-icon{
+    padding-left: 5px;
+}
+input{
+    font-size: 20px !important;
+    padding-left: 45px !important;
+}
+po-input ::placeholder{
+    padding-left: 2px !important;
+    font-size: 10px;;
+}
+.messageError{
+    position:absolute;
+    z-index: 10000;
+    display: flex;
+    top:-11px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin:20px;
+    height:60px;
+    background-color: brown;
+    box-shadow: 4px 5px 6px #949494;
+    color:white;
+    font-weight: 500;
+    transition: 300ms ease-in;
+}

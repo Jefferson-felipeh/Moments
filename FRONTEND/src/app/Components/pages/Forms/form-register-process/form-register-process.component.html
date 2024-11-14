@@ -1,0 +1,105 @@
+<form>
+    <po-number 
+        name="age"
+        type="number"
+        p-icon="ph ph-calendar-dots" 
+        p-label="AGE: *" 
+        p-placeholder="ex.18" 
+        [p-min]="18"
+        [p-max]="100"
+        class="pl-3 po-sm-12"
+        p-error-pattern="minimo 18 anos; máximo 100 anos"
+        p-required="true"
+        [(ngModel)]="formatAGE"
+        >
+    </po-number>
+    <po-input 
+        name="phone"
+        p-icon="ph ph-phone-list" 
+        p-label="PHONE: *" 
+        p-placeholder="(00)00000-0000" 
+        p-mask="(99)99999-9999"
+        p-error-pattern="Número Inválido!"
+        class="pl-3 po-sm-12"
+        [(ngModel)]="listDatasUser.phone"
+        >
+    </po-input>
+
+    <div class="w-full flex po-row">
+        <po-input 
+            name="cep" 
+            p-icon="ph ph-map-pin-area" 
+            p-label="CEP: *" 
+            (p-change)="fetchAPI()" 
+            p-placeholder="00000-000" 
+            class="pl-3 po-sm-9" 
+            [(ngModel)]="dataCEP.cep" 
+            [p-maxlength]="9"
+            >
+        </po-input>
+        <po-input 
+            class="LbIn"
+            name="uf" 
+            p-disabled="true" 
+            p-icon="ph ph-map-pin-simple-area"
+            p-label="UF:" 
+            class="pl-3 po-sm-3"
+            [ngModel]="dataCEP.uf"
+            >
+        </po-input>
+    </div>
+    <div class="flex w-full mb-4 po-row">
+        <po-input 
+            name="rua" 
+            p-label="RUA: *" 
+            p-icon="ph ph-road-horizon" 
+            class="pl-3 po-sm-12" 
+            [(ngModel)]="listDatasUser.rua"
+            >
+        </po-input>
+        <po-input 
+            name="city" 
+            p-disabled="true" 
+            p-icon="ph ph-city" 
+            p-label="CITY:" 
+            class="pl-3 po-sm-9"
+            [ngModel]="dataCEP.localidade" >
+        </po-input>
+        <po-input
+            name="numero" 
+            p-label="NUMBER:" 
+            p-icon="ph ph-number-square-eight" 
+            class="pl-3 po-sm-3" 
+            [(ngModel)]="listDatasUser.num"
+            >
+        </po-input>
+    </div>
+
+    <po-button
+        class="po-sm-12"
+        [p-icon]=""
+        p-label="Próximo"
+        p-icon="ph ph-arrow-circle-right"
+        p-icon-position="right"
+        p-size="100"
+        p-kind="primary"
+        [p-disabled]="!formValidFields()"
+        (p-click)="BtnFormProcess()">
+    </po-button>
+    <div class="mt-1 ml-1 mb-4"><p class="">* Campos Obrigatórios</p></div>
+
+    <po-button
+        class="btnReturn"
+        p-aria-label="string"
+        (p-click)="BtnReturnForm()"
+        p-kind="string"
+        p-label="Voltar"
+        p-icon="ph ph-arrow-circle-left"
+        p-size="medium" >
+    </po-button>
+</form>
+
+
+<div class="register">
+    <p>Do you already have an account?  <a routerLink="/login">log in</a></p>
+</div>

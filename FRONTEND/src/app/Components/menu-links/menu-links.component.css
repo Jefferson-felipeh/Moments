@@ -1,0 +1,29 @@
+.field_div{
+    box-shadow: 1px 2px 3px #ccc;
+}
+.field_div h1{
+    font-size:25px;
+    font-weight:bold;
+    margin:10px;
+}
+.field_div nav{
+    display:flex;
+    justify-content:space-between;
+}
+.field_div nav ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.field_div nav ul li{
+    padding:10px;
+}
+.field_div nav .li_login{
+    display:flex;
+}
+
+@media(max-width: 655px){
+    .li_field{
+        display:none;
+    }
+}

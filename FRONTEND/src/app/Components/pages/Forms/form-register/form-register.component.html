@@ -1,0 +1,45 @@
+<form action="" class="po-row mb-5" >     
+    <po-input 
+        name="name" 
+        type="text"
+        p-required="true" 
+        p-icon="ph ph-user" 
+        p-label="NAME: *" 
+        [p-minlength]="3"
+        [p-maxlength]="50"
+        p-placeholder="Digite seu Nome" 
+        class="pl-3 po-sm-12 in_btn mt-5"
+        [(ngModel)]="listDatasUser.name"
+        p-error-pattern="Campo Nome Inválido!"
+        >
+    </po-input>
+    <po-input 
+        name="cpf"
+        p-required="true" 
+        p-icon="ph ph-address-book-tabs" 
+        p-label="CPF: *" 
+        p-placeholder="Digite seu CPF" 
+        class="pl-3 po-sm-12 mb-3"
+        [(ngModel)]="listDatasUser.cpf"
+        [p-minlength]="14"
+        [p-maxlength]="14"
+        p-mask="999.999.999-99"
+        p-error-pattern="CPF no Formato Inválido!">
+    </po-input>
+        
+    <po-button
+        class="po-sm-12"
+        p-label="Próximo"
+        p-size="100"
+        p-icon="ph ph-arrow-circle-right"
+        [p-disabled]="!isFormValid()"
+        
+        p-icon-position="right"
+        p-kind="primary"
+        (p-click)="btnRegisterForm()">
+    </po-button>
+    <div class="mt-1 ml-1"><p class="">* Campos Obrigatórios</p></div>
+</form> 
+<div class="register">
+    <p>Do you already have an account?  <a routerLink="/login">log in</a></p>
+</div>

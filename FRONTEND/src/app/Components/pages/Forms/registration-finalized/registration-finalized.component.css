@@ -1,0 +1,35 @@
+.r_finalized{
+    width:45vw;
+    height:35vh;
+    box-shadow:3px 4px 5px #000;
+    position: relative;
+}
+.r_finalized h1{
+    font-size: 30px;
+    text-align: center;
+    margin:25px;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.r_finalized .icon_finalized{
+    width:40%;
+    text-align: center;
+    margin-top:15px;
+    font-size: 90px;
+    position: absolute;
+    left:47%;
+    top:45%;
+    transform: translate(-50%,-50%);
+    opacity: .5;
+
+}
+
+.r_finalized .btn-login{
+    width: 90%;
+    margin:10px;
+    text-align:center;
+    position: absolute;
+    bottom: 20px;
+    margin:10px;
+}

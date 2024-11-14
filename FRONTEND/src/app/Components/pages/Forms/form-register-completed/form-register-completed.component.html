@@ -1,0 +1,56 @@
+<form class="mb-5">
+    <po-email 
+        name="email" 
+        p-placeholder="Digite seu email"
+        p-error-pattern="Email Inválido!"
+        p-label="EMAIL:" 
+        class="pl-3 po-sm-12"
+        [(ngModel)]="dataList.email"
+        >
+    </po-email>
+    <po-password 
+        name="password" 
+        p-icon="ph ph-address-book-tabs" 
+        p-label="PASSWORD:" 
+        p-placeholder="Confirme sua senha" 
+        class="pl-3 po-sm-12"
+        [(ngModel)]="dataList.password"
+        >
+    </po-password>
+    <po-password 
+        name="cpassword" 
+        p-icon="ph ph-address-book-tabs" 
+        p-label="CONFIRM PASSWORD:" 
+        p-placeholder="Confirme sua senha" 
+        class="pl-3 po-sm-12"
+        [(ngModel)]="dataList.confirmPassword"
+        >
+    </po-password>
+
+    <po-button
+        class="po-sm-12 mt-3"
+        [p-icon]=""
+        p-label="Cadastrar"
+        p-icon="ph ph-arrow-circle-right"
+        p-icon-position="right"
+        p-size="100"
+        [p-disabled]="!formValidFields()"
+        p-kind="primary"
+        (p-click)="BtnRegisterFormCompleted()"
+    >
+    </po-button>
+    <div class="mt-1 ml-1 mb-10"><p class="">* Campos Obrigatórios</p></div>
+
+    <po-button
+        class="btnReturn"
+        p-aria-label="string"
+        (p-click)="BtnReturnForm()"
+        p-kind="string"
+        p-label="Voltar"
+        p-icon="ph ph-arrow-circle-left"
+        p-size="medium" >
+    </po-button>
+</form>
+<div class="register">
+    <p>Do you already have an account?  <a routerLink="/login">log in</a></p>
+</div>

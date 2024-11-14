@@ -1,0 +1,34 @@
+.about_container{
+    position: relative;
+    width:100%;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+
+}
+.about_container .about{
+    width:60%;
+    
+}
+.about_container .about h1{
+    margin:15px 10px;
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 1px #ccc;
+    width:100%;
+}
+.about_container .about .span_about{
+    color:rgb(104, 33, 170);
+    border-bottom: 1px dotted;
+    margin-right: 2px;
+}
+.list_text li{
+    text-align: justify;
+    margin:10px;
+}
+@media(max-width: 800px){
+    .about_container .about{
+        width: 100%;
+    }
+}

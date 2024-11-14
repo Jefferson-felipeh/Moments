@@ -1,12 +1,14 @@
 export interface dataUser{
-    id: number,
     name: string,
     email:string,
     cpf:string,
-    age:number,
+    age:string,
+    phone: string,
+    cep: string,
     password:string   
 }
 
 export interface User{
     email: string
+    password: string
 }

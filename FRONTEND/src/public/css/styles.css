@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  background-color: cadetblue;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(251, 251, 251);
+  margin-top: 20px;
+}
+#container .forms_field {
+  background-color: aqua;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(251, 251, 251);
+}
+#container .forms_field .title {
+  width: 100%;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 300;
+}
+#container .forms_field .div_form {
+  width: 55%;
+  height: 60%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(251, 251, 251);
+}
+#container .forms_field .div_form .steppe {
+  width: 100%;
+  margin: 10px;
+  justify-content: flex-end;
+}
+#container .forms_field .div_form .steppe po-stepper {
+  width: 70%;
+  display: flex;
+  margin: auto;
+}
+@media (max-width: 1680px) {
+  #container .forms_field {
+    width: 55%;
+  }
+  #container .forms_field .div_form {
+    width: 75%;
+  }
+}
+@media (max-width: 1560px) {
+  #container .forms_field {
+    width: 60%;
+  }
+  #container .forms_field .div_form {
+    width: 75%;
+  }
+}
+@media (max-width: 1280px) {
+  #container .forms_field {
+    width: 65%;
+  }
+  #container .forms_field .div_form {
+    width: 75%;
+  }
+}
+@media (max-width: 1050px) {
+  #container .forms_field {
+    width: 75%;
+  }
+  #container .forms_field .div_form {
+    width: 85%;
+  }
+}
+@media (max-width: 830px) {
+  #container .forms_field {
+    width: 85%;
+  }
+  #container .forms_field .div_form {
+    width: 95%;
+  }
+}
+@media (max-width: 680px) {
+  #container .forms_field {
+    width: 98%;
+  }
+  #container .forms_field .div_form {
+    width: 100%;
+  }
+}
+#container .register {
+  margin: 25px;
+  text-align: center;
+}
+#container .register a {
+  color: purple;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+#container .register a:hover {
+  text-decoration: underline;
+}
+#container .register a:active {
+  color: blue;
+}
+
+@media (max-width: 990px) {
+  #container {
+    height: 0%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
